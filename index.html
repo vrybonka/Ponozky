@@ -1,15 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ponozky</title>
+    <title>Naše Ponožky</title>
+    <style>
+        /* Сброс стилей и базовая настройка */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .hero {
+            background-image: url('images/hero-placeholder.jpg'); /* Здесь будет изображение */
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+        }
+
+        .about {
+            margin-top: 40px;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .product-gallery {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .product-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: calc(33% - 20px);
+            transition: transform 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .product-item h3 {
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Медиазапросы для адаптивности */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 0;
+            }
+
+            .product-item {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-item {
+                width: 100%;
+            }
+
+            .hero h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>ponozky</h1>
-    <p>ponozky are a type of footwear</p>
-    <p>they are made of leather</p>
 
-    123123132
+    <!-- Хедер -->
+    <header>
+        <h1>Naše Ponožky</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hlavná stránka</a></li>
+                <li><a href="proces.html">Proces výroby</a></li>
+                <li><a href="product.html">Naše produkty</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Герой-блок -->
+        <section class="hero">
+            <h2>Vitajte na stránke našich ponožiek!</h2>
+            <p>Objavte ponožky, ktoré kombinujú pohodlie a štýl.</p>
+        </section>
+
+        <!-- О нас -->
+        <section class="about">
+            <h3>O našich ponožkách</h3>
+            <p>Naše ponožky sú vyrobené z kvalitných materiálov a sú ideálne pre každý deň. Ponúkame rôzne štýly pre každú príležitosť.</p>
+        </section>
+
+        <!-- Галерея продуктов -->
+        <section class="product-gallery">
+            <div class="product-item">
+                <img src="images/socks1.jpg" alt="Ponožky 1">
+                <h3>Chlpaté ponožky</h3>
+            </div>
+            <div class="product-item">
+                <img src="images/socks2.jpg" alt="Ponožky 2">
+                <h3>Športové ponožky</h3>
+            </div>
+            <div class="product-item">
+                <img src="images/socks3.jpg" alt="Ponožky 3">
+                <h3>Vlnené ponožky</h3>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2025 Naše Ponožky | Všetky práva sú vyhradené</p>
+    </footer>
 </body>
 </html>
