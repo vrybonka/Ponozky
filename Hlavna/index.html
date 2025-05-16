@@ -36,22 +36,46 @@
         <!-- Prudukty -->
         <section class="product-gallery">
 
-            <a href="../ProductPages/product1.html" class="product-item item-1">
-                <img src="../1.Obrazky/Clasic.png" alt="Ponožky 1">
-                <h3>Klasické ponožky</h3>
-            </a>
+        <a class="product-item item-1"
+            data-img="../1.Obrazky/Clasic.png"
+            data-title="Klasické ponožky"
+            data-description="Naše klasické ponožky ponúkajú ideálne spojenie komfortu, kvality a dizajnu..."
+            onclick="openProductPopup(this)">
+            <img src="../1.Obrazky/Clasic.png" alt="Ponožky 1">
+            <h3>Klasické ponožky</h3>
+        </a>
         
-            <a href="../ProductPages/product2.html" class="product-item item-2">
-                <img src="../1.Obrazky/Valentin.png" alt="Ponožky 2">
-                <h3>Valentínské ponožky</h3>
-            </a>
+        <a class="product-item item-2"
+            data-img="../1.Obrazky/Valentin.png"
+            data-title="Valentínské ponožky"
+            data-description="Rozžiarte srdce svojej polovičky týmito romantickými ponožkami plnými lásky! Ideálne ako darček na Valentína – mäkké, pohodlné a s dizajnom, ktorý zaručene zahreje nielen nohy, ale aj srdce."
+            onclick="openProductPopup(this)">
+            <img src="../1.Obrazky/Valentin.png" alt="Ponožky 2">
+            <h3>Valentínské ponožky</h3>
+        </a>
         
-            <a href="../ProductPages/product3.html" class="product-item item-3">
-                <img src="../1.Obrazky/GPT.png" alt="Ponožky 3">
-                <h3>Ponožky umelej inteligencie</h3>
-            </a>
+        <a class="product-item item-3"
+            data-img="../1.Obrazky/GPT.png"
+            data-title="Ponožky umelej inteligencie"
+            data-description="Spojte technológiu a štýl s týmito originálnymi AI ponožkami! Inšpirované neurónovými sieťami, kódmi a budúcnosťou – pre všetkých milovníkov moderných technológií, ktorí chcú kráčať s dobou (doslova)."
+            onclick="openProductPopup(this)">
+            <img src="../1.Obrazky/GPT.png" alt="Ponožky 3">
+            <h3>Ponožky umelej inteligencie</h3>
+        </a>
         
         </section>
+        
+                <!-- Dynamic Popup -->
+        <div class="popup-overlay" id="popup">
+            <div class="popup-content">
+                <img src="" alt="Ponožka" class="popup-image" id="popup-img">
+                <div class="popup-text">
+                    <h3 id="popup-title">Názov</h3>
+                    <p id="popup-description">Popis</p>
+                </div>
+                <button class="popup-close" onclick="togglePopup()">✕</button>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -59,4 +83,27 @@
         <p>&copy; 2025 Naše Ponožky | Všetky práva sú vyhradené.</p>
     </footer>
 </body>
+<script>
+function openProductPopup(element) {
+    const img = element.getAttribute('data-img');
+    const title = element.getAttribute('data-title');
+    const description = element.getAttribute('data-description');
+
+    document.getElementById('popup-img').src = img;
+    document.getElementById('popup-title').textContent = title;
+    document.getElementById('popup-description').textContent = description;
+
+    document.getElementById('popup').style.display = 'flex';
+}
+
+function togglePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+
+function closePopup(e) {
+    if (e.target.id === 'popup') {
+        togglePopup();
+    }
+}
+</script>
 </html>
