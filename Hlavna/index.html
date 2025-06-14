@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <title>Naše Ponožky</title>
+    <title>Ostrovky</title>
 </head>
 <body>
     <!-- Header -->
@@ -24,43 +24,196 @@
     <main>
         <!-- Hero Section -->
         <section class="center fade-in">
-            <h2>Vitajte vo svete ponožiek budúcnosti!</h2>
-            <p>Od klasiky po technologickú inšpiráciu — každý pár rozpráva príbeh.</p>
-            <div class="cta-buttons">
-            </div>
+            <h2>O našich ponožkách</h2>
+            <p>
+                Sme školská značka Ostrovky a špecializujeme sa na výrobu ponožiek, ktoré spájajú kvalitu, pohodlie a originálny dizajn. 
+                Ponúkame rôzne štýly, ktoré vyjadrujú vašu osobnosť a prispôsobia sa každej príležitosti.
+            </p>
         </section>
 
-        <!-- About Section -->
-        <section class="about fade-in">
-            <h3>O našich ponožkách</h3>
-            <p>Naše ponožky sú vyrobené z kvalitných materiálov a sú ideálne pre každý deň. Ponúkame rôzne štýly pre každú príležitosť.</p>
-        </section>
+        <div class="divider fade-in">
+            <span>DOSTUPNÉ PRODUKTY</span>
+        </div>
 
         <!-- Produkty -->
         <section class="product-gallery fade-in">
-            <a class="product-item item-1" data-img="../1.Obrazky/Clasic.png" data-title="Klasické ponožky" data-description="Naše klasické ponožky ponúkajú ideálne spojenie komfortu, kvality a dizajnu..." onclick="openProductPopup(this)">
-                <img src="../1.Obrazky/Clasic.png" alt="Ponožky 1">
-                <h3>Klasické ponožky</h3>
-            </a>
+            <!-- Klasické ponožky -->
+            <div class="item-1" 
+                data-img="../1.Obrazky/Neutral2.jpg"
+                data-title="Klasické ponožky"
+                data-description="Naše klasické ponožky sú vyrobené z kvalitných materiálov, ktoré zabezpečujú maximálny komfort počas celého dňa. Ideálne pre každodenné nosenie, kombinujú štýlový dizajn s dlhou životnosťou."
+                onclick="openProductPopup(this)">
+                <img src="../1.Obrazky/Neutral2.jpg" alt="Klasické ponožky">
+                <div class="info">
+                    <h3>Klasické ponožky</h3>
+                    <h4>5.99 €</h4>
+                </div>
+            </div>
 
-            <a class="product-item item-2" data-img="../1.Obrazky/Valentin.png" data-title="Valentínske ponožky" data-description="Rozžiarte srdce svojej polovičky týmito romantickými ponožkami plnými lásky!..." onclick="openProductPopup(this)">
-                <img src="../1.Obrazky/Valentin.png" alt="Ponožky 2">
-                <h3>Valentínske ponožky</h3>
-            </a>
-
-            <a class="product-item item-3" data-img="../1.Obrazky/GPT.png" data-title="Ponožky umelej inteligencie" data-description="Spojte technológiu a štýl s týmito originálnymi AI ponožkami!..." onclick="openProductPopup(this)">
-                <img src="../1.Obrazky/GPT.png" alt="Ponožky 3">
-                <h3>Ponožky umelej inteligencie</h3>
-            </a>
+            <!-- Valentínske ponožky -->
+            <div class="item-2"
+                data-img="../1.Obrazky/Valentin1.jpg"
+                data-title="Valentínske ponožky"
+                data-description="Prekvapte svoju polovičku týmito štýlovými a pohodlnými valentínskymi ponožkami s láskyplným motívom. Perfektný darček, ktorý zahreje nielen nohy, ale aj srdce."
+                onclick="openProductPopup(this)">
+                <img src="../1.Obrazky/Valentin1.jpg" alt="Valentínske ponožky">
+                <div class="info">
+                    <h3>Valentínske ponožky</h3>
+                    <h4>5.99 €</h4>
+                </div>
+            </div>
         </section>
+
+        <div class="divider fade-in">
+            <span>COMING SOON</span>
+        </div>
+
+        <section class="soon-gallery fade-in">
+        <!-- Veľkonočne ponožky -->
+        <div class="soon-1"
+            data-img="../2.Graficky_navrh/Easter.png"
+            data-title="Veľkonočne ponožky"
+            data-description="Rozžiarte svoju Veľkú noc týmito farebnými veľkonočnými ponožkami s hravými motívmi. Perfektný doplnok na sviatočné dni plné tradícií, smiechu a pohody."
+            onclick="openProductPopup(this)">
+            <img src="../2.Graficky_navrh/Easter.png" alt="Veľkonočne ponožky">
+            <div class="info">
+                <h3>Veľkonočne ponožky</h3>
+                <h4>Už čoskoro</h4>
+            </div>
+        </div>
+
+        <!-- Ponožky umelej inteligencie -->
+        <div class="soon-2"
+            data-img="../2.Graficky_navrh/GPT.png"
+            data-title="Ponožky umelej inteligencie"
+            data-description="Ponožky umelej inteligencie, ktoré kráčajú so stopou doby, spoja moderný štýl a inovatívnu technológiu, aby ste vždy boli o krok vpred. Komfort a dizajn, ktorý myslí na budúcnosť."
+            onclick="openProductPopup(this)">
+            <img src="../2.Graficky_navrh/GPT.png" alt="Ponožky umelej inteligencie">
+            <div class="info">
+                <h3>Ponožky umelej inteligencie</h3>
+                <h4>Už čoskoro</h4>
+            </div>
+        </div>
+
+        <!-- Ponožky pre Grafikov -->
+        <div class="soon-3"
+            data-img="../2.Graficky_navrh/Grafici.png"
+            data-title="Grafici"
+            data-description="Pre všetkých študentských grafikov, ktorí žijú vo vrstvách, ako vo Photoshope, tak aj v ponožkách! Tieto originálne dizajnové ponožky sú ako paleta farieb pre tvoje nohy."
+            onclick="openProductPopup(this)">
+            <img src="../2.Graficky_navrh/Grafici.png" alt="Ponožky pre Grafikov">
+            <div class="info">
+                <h3>Grafici ponožky</h3>
+                <h4>Už čoskoro</h4>
+            </div>
+        </div>
+
+        <!-- Halloweenske ponožky -->
+        <div class="soon-4"
+            data-img="../2.Graficky_navrh/Halloween.png"
+            data-title="Halloweenske ponožky"
+            data-description="Vystrašte nudu zo svojho šatníka! Tieto halloweenske ponožky sú plné strašidelného štýlu a pohodlia."
+            onclick="openProductPopup(this)">
+            <img src="../2.Graficky_navrh/Halloween.png" alt="Halloweenske ponožky">
+            <div class="info">
+                <h3>Halloweenske ponožky</h3>
+                <h4>Už čoskoro</h4>
+            </div>
+        </div>
+
+        <!-- Halloweenske ponožky V2 -->
+        <div class="soon-5"
+            data-img="../2.Graficky_navrh/Halloween2.png"
+            data-title="Halloweenske ponožky V2"
+            data-description="Vykročte do tmy s našimi halloweenskymi ponožkami, ktoré spájajú tajomno, pohodlie a štýl. Ideálne na jesenné prechádzky, párty v kostýme alebo len tak, keď chcete cítiť čaro Halloweenu pri každom kroku."
+            onclick="openProductPopup(this)">
+            <img src="../2.Graficky_navrh/Halloween2.png" alt="Halloweenske ponožky">
+            <div class="info">
+                <h3>Halloweenske ponožky 2</h3>
+                <h4>Už čoskoro</h4>
+            </div>
+        </div>
+
+        <!-- IAST -->
+        <div class="soon-6"
+            data-img="../2.Graficky_navrh/IAST.png"
+            data-title="Internetové a sieťové technológie"
+            data-description="Zoznámte sa s najnovšími trendmi a technológiami v oblasti internetu a počítačových sietí. Naše ponožky sú inšpirované moderným digitálnym svetom a prinášajú štýl, ktorý spája techniku s pohodlím."
+            onclick="openProductPopup(this)">
+            <img src="../2.Graficky_navrh/IAST.png" alt="IAST ponožky">
+            <div class="info">
+                <h3>Internetové a sieťové technológie</h3>
+                <h4>Už čoskoro</h4>
+            </div>
+        </div>
+
+        <!-- Ponožky pre IT -->
+        <div class="soon-7"
+            data-img="../2.Graficky_navrh/IT.png"
+            data-title="Itečkari"
+            data-description="Pre všetkých Itečkárov, ktorí milujú technológie, programovanie a riešenie IT výziev. Naše ponožky sú pohodlné, štýlové a perfektne doplnia tvoj každodenný IT outfit."
+            onclick="openProductPopup(this)">
+            <img src="../2.Graficky_navrh/IT.png" alt="Ponožky pre IT">
+            <div class="info">
+                <h3>IT ponožky</h3>
+                <h4>Už čoskoro</h4>
+            </div>
+        </div>
+
+        <!-- Ponožky pre PDT -->
+        <div class="soon-8"
+            data-img="../2.Graficky_navrh/PDT.png"
+            data-title="Programátory digitálnych technológií"
+            data-description="Pre programátorov a milovníkov technológií — tieto ponožky s motívom kódu a digitálnych vzorov sú ideálnym doplnkom vášho outfitu. Pohodlné, štýlové a navrhnuté pre tých, ktorí žijú vo svete digitálnych inovácií.""
+            onclick="openProductPopup(this)">
+            <img src="../2.Graficky_navrh/PDT.png" alt="PDT">
+            <div class="info">
+                <h3>PDT ponožky</h3>
+                <h4>Už čoskoro</h4>
+            </div>
+        </div>
+
+        <!-- Ponožky pre Spravcov -->
+        <div class="soon-9"
+            data-img="../2.Graficky_navrh/Spravca.png"
+            data-title="Spravcovia"
+            data-description="Tieto ponožky sú navrhnuté špeciálne pre správcov sietí, pohodlné, odolné a so štýlovým motívom, ktorý ocenia všetci, čo držia sieť pod kontrolou. Perfektný doplnok pre každodennú prácu aj odpočinok."
+            onclick="openProductPopup(this)">
+            <img src="../2.Graficky_navrh/Spravca.png" alt="Ponožky pre Spravcov">
+            <div class="info">
+                <h3>Ponožky pre Spravcov</h3>
+                <h4>Už čoskoro</h4>
+            </div>
+        </div>
+
+        <!-- Vianočne ponožky -->
+        <div class="soon-10"
+            data-img="../2.Graficky_navrh/Vianoce.png"
+            data-title="Vianočne ponožky"
+            data-description="Zažite kúzlo Vianoc s našimi vianočnými ponožkami plnými veselých motívov a teplého komfortu. Perfektný doplnok na sviatočné chvíle doma alebo štýlový darček pre vašich blízkych."
+            onclick="openProductPopup(this)">
+            <img src="../2.Graficky_navrh/Vianoce.png" alt="Vianočne ponožky">
+            <div class="info">
+                <h3>Vianočne ponožky</h3>
+                <h4>Už čoskoro</h4>
+            </div>
+        </div>
+
+    </section>
+
 
         <!-- Dynamic Popup -->
         <div class="popup-overlay" id="popup" onclick="closePopup(event)">
             <div class="popup-content">
-                <img src="" alt="Ponožka" class="popup-image" id="popup-img">
+                <div class="popup-image-container">
+                    <img src="" alt="Ponožka" class="popup-image" id="popup-img">
+                </div>
                 <div class="popup-text">
                     <h3 id="popup-title">Názov</h3>
                     <p id="popup-description">Popis</p>
+                    <div id="soon-message" style="display:none; font-weight:bold; margin-top: 15px; color: #931a1d;">
+                        Už čoskoro
+                    </div>
                 </div>
                 <button class="popup-close" onclick="togglePopup()">&times;</button>
             </div>
@@ -76,27 +229,34 @@
     </footer>
 
     <script>
-    function openProductPopup(element) {
-        const img = element.getAttribute('data-img');
-        const title = element.getAttribute('data-title');
-        const description = element.getAttribute('data-description');
+        function openProductPopup(element) {
+            const img = element.getAttribute('data-img');
+            const title = element.getAttribute('data-title');
+            const description = element.getAttribute('data-description');
+            const soonMessage = document.getElementById('soon-message');
 
-        document.getElementById('popup-img').src = img;
-        document.getElementById('popup-title').textContent = title;
-        document.getElementById('popup-description').textContent = description;
+            document.getElementById('popup-img').src = img;
+            document.getElementById('popup-title').textContent = title;
+            document.getElementById('popup-description').textContent = description;
 
-        document.getElementById('popup').style.display = 'flex';
-    }
+                if (element.className.includes('soon-')) {
+                    soonMessage.style.display = 'block';
+                } else {
+                    soonMessage.style.display = 'none';
+                }
 
-    function togglePopup() {
-        document.getElementById('popup').style.display = 'none';
-    }
-
-    function closePopup(e) {
-        if (e.target.id === 'popup') {
-            togglePopup();
+            document.getElementById('popup').style.display = 'flex';
         }
-    }
+
+        function togglePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        function closePopup(e) {
+            if (e.target.id === 'popup') {
+                togglePopup();
+            }
+        }
     </script>
 </body>
 </html>
