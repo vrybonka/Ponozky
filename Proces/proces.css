@@ -115,6 +115,14 @@ main {
     font-size: 1.2rem;
 }
 
+.intro-video {
+    display: block;
+    margin: 30px auto 0;
+    width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
 /* Footer */
 footer {
     background-color: #222;
