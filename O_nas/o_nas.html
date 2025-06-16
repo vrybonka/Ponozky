@@ -54,7 +54,6 @@
             <div class="team-member">
                 <h3>Richard Vyhnal</h3>
                 <p>Webová stránka</p>
-                <p>Fotenie</p>
                 <p>Modely</p>
             </div>
 
@@ -120,28 +119,52 @@
             </div>
         </div>
 
-        <!-- Plagat -->
         <div class="right-column">
-                <div class="team-image">
+                <!-- Plagát -->
+                <div class="plagat">
                     <img src="../1.Obrazky/Plagat.png" alt="Plagat">
                 </div>
 
+                <!-- Špeciálne poďakovanie -->
                 <div class="thank-you">
                     <h2>Špeciálne poďakovanie</h2>
                     <p>
-                        Ďakujeme veľmi pekne za pomoc s našim projektom pani učiteľke Tokošovej a pani učiteľke Brockovej.<br>
+                        Ďakujeme veľmi pekne za pomoc s našim projektom pani učiteľke <b>Tokošovej</b> a pani učiteľke <b>Brockovej</b>.<br>
                         Bez nich by sme to nedokázali zrealizovať.
                     </p>
                 </div>
             </div>
     </main>
 
+    <div id="popup-overlay" class="popup-overlay hidden">
+        <div class="popup-content">
+            <img src="../1.Obrazky/Plagat.png" alt="Plagat v plnej veľkosti">
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Ostrovky | Všetky práva sú vyhradené.</p>
-        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+        <a href="https://www.instagram.com/sos_ostrovskeho/?hl=en" target="_blank" class="social-icon">
             <i class="fab fa-instagram"></i> Instagram
         </a>
     </footer>
+
+    <script>
+        const popupOverlay = document.getElementById('popup-overlay');
+        const plagatImg = document.querySelector('.plagat img');
+
+        // Open popup
+        plagatImg.addEventListener('click', () => {
+            popupOverlay.classList.add('active');
+        });
+
+        // Close on outside click with animation
+        popupOverlay.addEventListener('click', (e) => {
+            if (!e.target.closest('.popup-content')) {
+                popupOverlay.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

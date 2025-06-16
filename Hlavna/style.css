@@ -5,9 +5,14 @@
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: Roboto;
+    src: url('../Fonty/Roboto/static/Roboto-ExtraLight.ttf');
+}
+
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(20px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 body {
@@ -119,7 +124,8 @@ main {
 }
 
 .item-1,
-.item-2 {
+.item-2,
+.item-3 {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -135,7 +141,8 @@ main {
 }
 
 .item-1 img, 
-.item-2 img {
+.item-2 img,
+.item-3 img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -144,7 +151,8 @@ main {
 }
 
 .item-1 .info,
-.item-2 .info {
+.item-2 .info,
+.item-3 .info {
     margin-top: auto;
     width: 100%;
     padding: 0 10px 10px;
@@ -152,7 +160,8 @@ main {
 }
 
 .item-1 .info h3,
-.item-2 .info h3 {
+.item-2 .info h3,
+.item-3 .info h3 {
     font-size: 1.2rem;
     margin-bottom: 4px;
     color: #333;
@@ -160,15 +169,20 @@ main {
 
 /*Hover price*/
 .item-1 .info h4,
-.item-2 .info h4 {
+.item-2 .info h4,
+.item-3 .info h4 {
     transition: color 0.5s ease;
 }
 
 .item-1:hover .info h4 {
-    color: #1d5e8e;
+    color : #B65FCF;
 }
 
 .item-2:hover .info h4 {
+    color: #1d5e8e;
+}
+
+.item-3:hover .info h4 {
     color: #931a1d;
 }
 
@@ -176,10 +190,16 @@ main {
 /*Hover item*/
 .item-1:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 30px #1d5e8e;
+    box-shadow: 0 0 30px #B65FCF;
 }
 
 .item-2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px #1d5e8e;
+
+}
+
+.item-3:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 30px #931a1d;
 }
@@ -359,10 +379,23 @@ color: #931a1d;
     animation: slideUp 0.3s ease-in-out;
 }
 
+.popup-content.show {
+    animation: slideUp 0.3s ease-in-out forwards;
+}
+
+.popup-content.hide {
+    animation: slideDown 0.3s ease-in-out forwards;
+}
+
 /* popup Animation */
 @keyframes slideUp {
     from { transform: translateY(50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(50px); opacity: 0; }
 }
 
 .popup-image-container {

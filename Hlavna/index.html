@@ -40,8 +40,21 @@
 
         <!-- Produkty -->
         <section class="product-gallery fade-in">
-            <!-- Klasické ponožky -->
+            <!-- Mužske/Ženske -->
             <div class="item-1" 
+                data-img="../1.Obrazky/Muzske+zenske1.jpg"
+                data-title="Mužske/Ženske ponožky"
+                data-description="Kvalitné ponožky pre mužov aj ženy, ktoré ponúkajú pohodlie, priedušnosť a dlhú životnosť. Vhodné na každodenné nosenie so štýlovým a praktickým dizajnom."
+                onclick="openProductPopup(this)">
+                <img src="../1.Obrazky/Muzske+zenske1.jpg" alt="Mužske/Ženske ponožky">
+                <div class="info">
+                    <h3>Mužske/Ženske ponožky</h3>
+                    <h4>5€</h4>
+                </div>
+            </div>
+
+            <!-- Klasické ponožky -->
+            <div class="item-2" 
                 data-img="../1.Obrazky/Neutral2.jpg"
                 data-title="Klasické ponožky"
                 data-description="Naše klasické ponožky sú vyrobené z kvalitných materiálov, ktoré zabezpečujú maximálny komfort počas celého dňa. Ideálne pre každodenné nosenie, kombinujú štýlový dizajn s dlhou životnosťou."
@@ -49,12 +62,12 @@
                 <img src="../1.Obrazky/Neutral2.jpg" alt="Klasické ponožky">
                 <div class="info">
                     <h3>Klasické ponožky</h3>
-                    <h4>5.99 €</h4>
+                    <h4>5€</h4>
                 </div>
             </div>
 
             <!-- Valentínske ponožky -->
-            <div class="item-2"
+            <div class="item-3"
                 data-img="../1.Obrazky/Valentin1.jpg"
                 data-title="Valentínske ponožky"
                 data-description="Prekvapte svoju polovičku týmito štýlovými a pohodlnými valentínskymi ponožkami s láskyplným motívom. Perfektný darček, ktorý zahreje nielen nohy, ale aj srdce."
@@ -62,7 +75,7 @@
                 <img src="../1.Obrazky/Valentin1.jpg" alt="Valentínske ponožky">
                 <div class="info">
                     <h3>Valentínske ponožky</h3>
-                    <h4>5.99 €</h4>
+                    <h4>5€</h4>
                 </div>
             </div>
         </section>
@@ -206,7 +219,7 @@
 
 
         <!-- Dynamic Popup -->
-        <div class="popup-overlay" id="popup" onclick="closePopup(event)">
+        <div class="popup-overlay" id="popup" onclick="handleOverlayClick(event)">
             <div class="popup-content">
                 <div class="popup-image-container">
                     <img src="" alt="Ponožka" class="popup-image" id="popup-img">
@@ -218,7 +231,7 @@
                         Už čoskoro
                     </div>
                 </div>
-                <button class="popup-close" onclick="togglePopup()">&times;</button>
+                <button class="popup-close" onclick="closePopup()">&times;</button>
             </div>
         </div>
     </main>
@@ -232,34 +245,39 @@
     </footer>
 
     <script>
-        function openProductPopup(element) {
-            const img = element.getAttribute('data-img');
-            const title = element.getAttribute('data-title');
-            const description = element.getAttribute('data-description');
-            const soonMessage = document.getElementById('soon-message');
+    function openProductPopup(element) {
+        const popup = document.getElementById('popup');
+        const content = popup.querySelector('.popup-content');
 
-            document.getElementById('popup-img').src = img;
-            document.getElementById('popup-title').textContent = title;
-            document.getElementById('popup-description').textContent = description;
+        document.getElementById('popup-img').src = element.getAttribute('data-img');
+        document.getElementById('popup-title').textContent = element.getAttribute('data-title');
+        document.getElementById('popup-description').textContent = element.getAttribute('data-description');
 
-                if (element.className.includes('soon-')) {
-                    soonMessage.style.display = 'block';
-                } else {
-                    soonMessage.style.display = 'none';
-                }
+        const soonMessage = document.getElementById('soon-message');
+        soonMessage.style.display = element.className.includes('soon-') ? 'block' : 'none';
 
-            document.getElementById('popup').style.display = 'flex';
+        popup.style.display = 'flex';
+        content.classList.remove('hide');
+        content.classList.add('show');
+    }
+
+    function closePopup() {
+        const popup = document.getElementById('popup');
+        const content = popup.querySelector('.popup-content');
+
+        content.classList.remove('show');
+        content.classList.add('hide');
+
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 300);
+    }
+
+    function handleOverlayClick(e) {
+        if (e.target.id === 'popup') {
+            closePopup();
         }
-
-        function togglePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
-
-        function closePopup(e) {
-            if (e.target.id === 'popup') {
-                togglePopup();
-            }
-        }
+    }
     </script>
 </body>
 </html>
