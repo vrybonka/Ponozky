@@ -28,9 +28,17 @@
         <section class="center">
             <h2>Ako vyrábame naše ponožky</h2>
             <p>Výrobný proces našich ponožiek prebieha v 9 dôležitých krokoch – každý je starostlivo kontrolovaný, aby výsledok bol perfektný.</p>
-            <!--<video class="intro-video" autoplay muted loop playsinline>
-                <source src="../4.Videa/Hlavna stranka.mov" type="video/mp4">
-            </video>-->
+            
+            <!--<div class="video-container">
+                <video id="introVideo" class="intro-video" autoplay muted loop playsinline>
+                    <source src="../4.Videa/Hlavna stranka.mov" type="video/mp4">
+                    Váš prehliadač nepodporuje video tag.
+                </video>
+                <div class="controls">
+                    <button id="toggleSound" class="sound-button">🔇</button>
+                </div>
+            </div> -->
+        
         </section>
 
         <section class="gallery">
@@ -83,6 +91,16 @@
             <i class="fab fa-instagram"></i> Instagram
         </a>
     </footer>
+    
+    <script>
+        //Toogle volume
+        const video = document.getElementById('introVideo');
+        const toggleSoundButton = document.getElementById('toggleSound');
 
+        toggleSoundButton.addEventListener('click', () => {
+            video.muted = !video.muted;
+            toggleSoundButton.textContent = video.muted ? "🔇" : "🔊";
+        });
+    </script>
 </body>
 </html>
