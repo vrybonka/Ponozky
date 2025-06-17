@@ -129,9 +129,14 @@
             <div class="thank-you">
                 <h2>Špeciálne poďakovanie</h2>
                 <p>
-                    Ďakujeme veľmi pekne za pomoc s našim projektom pani učiteľke <b>Tokošovej</b> a pani učiteľke <b>Brockovej</b>.<br>
+                    Ďakujeme veľmi pekne za pomoc s našim projektom <b>pani učiteľke Tokošovej</b> a <b>pani učiteľke Brockovej</b>.<br>
                     Bez nich by sme to nedokázali zrealizovať.
                 </p>
+            </div>
+
+            <!-- Instagramovy prispevok -->
+            <div class="instagram_post">
+                <img src="../1.Obrazky/Instagram.png" alt="Instagramovy prispevok">
             </div>
         </div>
     </main>
@@ -145,21 +150,23 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Ostrovky | Všetky práva sú vyhradené.</p>
-        <a href="https://www.instagram.com/sos_ostrovskeho/?hl=en" target="_blank" class="social-icon">
+        <a href="https://www.instagram.com/ostrov_ponozky/?hl=en" target="_blank" class="social-icon">
             <i class="fab fa-instagram"></i> Instagram
         </a>
     </footer>
 
     <script>
         const popupOverlay = document.getElementById('popup-overlay');
-        const plagatImg = document.querySelector('.plagat img');
+        const popupContentImg = document.querySelector('.popup-content img');
 
-        // Open popup
-        plagatImg.addEventListener('click', () => {
-            popupOverlay.classList.add('active');
+        // Select ALL clickable images
+        document.querySelectorAll('.plagat img, .instagram_post img').forEach(image => {
+            image.addEventListener('click', () => {
+                popupContentImg.src = image.src;
+                popupOverlay.classList.add('active');
+            });
         });
 
-        // Close on outside click with animation
         popupOverlay.addEventListener('click', (e) => {
             if (!e.target.closest('.popup-content')) {
                 popupOverlay.classList.remove('active');

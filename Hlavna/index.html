@@ -32,9 +32,16 @@
                 Sme školská značka Ostrovky a špecializujeme sa na výrobu ponožiek, ktoré spájajú kvalitu, pohodlie a originálny dizajn. 
                 Ponúkame rôzne štýly, ktoré vyjadrujú vašu osobnosť a prispôsobia sa každej príležitosti.
             </p>
-            <video class="intro-video" autoplay muted loop playsinline>
-                <source src="../4.Videa/Hlavna stranka.mov" type="video/mp4">
-            </video>
+            
+            <div class="video-container">
+                <video id="introVideo" class="intro-video" autoplay muted loop playsinline>
+                    <source src="../4.Videa/Hlavna stranka.mov" type="video/mp4">
+                    Váš prehliadač nepodporuje video tag.
+                </video>
+                <div class="controls">
+                    <button id="toggleSound" class="sound-button">🔇</button>
+                </div>
+            </div>
         </section>
 
         <div class="divider">
@@ -46,13 +53,13 @@
             <!-- Mužske/Ženske -->
             <div class="item-1" 
                 data-img="../1.Obrazky/Muzske+zenske1.jpg"
-                data-title="Mužske/Ženske ponožky"
+                data-title="Mužské / Ženské ponožky"
                 data-description="Kvalitné ponožky pre mužov aj ženy, ktoré ponúkajú pohodlie, priedušnosť a dlhú životnosť. Vhodné na každodenné nosenie so štýlovým a praktickým dizajnom."
                 onclick="openProductPopup(this)">
                 <img src="../1.Obrazky/Muzske+zenske1.jpg" alt="Mužske/Ženske ponožky">
                 <div class="info">
-                    <h3>Mužske/Ženske ponožky</h3>
-                    <h4>5€</h4>
+                    <h3>Mužské / Ženské ponožky</h3>
+                    <h4>4.99€</h4>
                 </div>
             </div>
 
@@ -65,7 +72,7 @@
                 <img src="../1.Obrazky/Neutral2.jpg" alt="Klasické ponožky">
                 <div class="info">
                     <h3>Klasické ponožky</h3>
-                    <h4>5€</h4>
+                    <h4>4.99€</h4>
                 </div>
             </div>
 
@@ -78,7 +85,7 @@
                 <img src="../1.Obrazky/Valentin1.jpg" alt="Valentínske ponožky">
                 <div class="info">
                     <h3>Valentínske ponožky</h3>
-                    <h4>5€</h4>
+                    <h4>4.99€</h4>
                 </div>
             </div>
         </section>
@@ -93,7 +100,7 @@
                 data-img="../2.Graficky_navrh/Easter.png"
                 data-title="Veľkonočne ponožky"
                 data-description="Rozžiarte svoju Veľkú noc týmito farebnými veľkonočnými ponožkami s hravými motívmi. Perfektný doplnok na sviatočné dni plné tradícií, smiechu a pohody."
-                data-price="5€"
+                data-price="4.99€"
                 onclick="openProductPopup(this)">
                 <img src="../2.Graficky_navrh/Easter.png" alt="Veľkonočne ponožky">
                 <div class="info">
@@ -107,7 +114,7 @@
                 data-img="../2.Graficky_navrh/GPT.png"
                 data-title="Ponožky AI"
                 data-description="Ponožky umelej inteligencie, ktoré kráčajú so stopou doby, spoja moderný štýl a inovatívnu technológiu, aby ste vždy boli o krok vpred. Komfort a dizajn, ktorý myslí na budúcnosť."
-                data-price="5€"
+                data-price="4.99€"
                 onclick="openProductPopup(this)">
                 <img src="../2.Graficky_navrh/GPT.png" alt="Ponožky umelej inteligencie">
                 <div class="info">
@@ -121,7 +128,7 @@
                 data-img="../2.Graficky_navrh/Grafici.png"
                 data-title="Grafici ponožky"
                 data-description="Pre všetkých študentských grafikov, ktorí žijú vo vrstvách, ako vo Photoshope, tak aj v ponožkách! Tieto originálne dizajnové ponožky sú ako paleta farieb pre tvoje nohy."
-                data-price="5€"
+                data-price="4.99€"
                 onclick="openProductPopup(this)">
                 <img src="../2.Graficky_navrh/Grafici.png" alt="Ponožky pre Grafikov">
                 <div class="info">
@@ -135,7 +142,7 @@
                 data-img="../2.Graficky_navrh/Halloween.png"
                 data-title="Halloweenske ponožky"
                 data-description="Vystrašte nudu zo svojho šatníka! Tieto halloweenske ponožky sú plné strašidelného štýlu a pohodlia."
-                data-price="5€"
+                data-price="4.99€"
                 onclick="openProductPopup(this)">
                 <img src="../2.Graficky_navrh/Halloween.png" alt="Halloweenske ponožky">
                 <div class="info">
@@ -149,7 +156,7 @@
                 data-img="../2.Graficky_navrh/Halloween2.png"
                 data-title="Halloweenske ponožky V2"
                 data-description="Halloweenske ponožky s originálnymi motívmi prinesú zábavu aj štýl do vašich jesenných dní. Pohodlné, mäkké a ideálne na chladné večery plné strašidelnej atmosféry."
-                data-price="5€"
+                data-price="4.99€"
                 onclick="openProductPopup(this)">
                 <img src="../2.Graficky_navrh/Halloween2.png" alt="Halloweenske ponožky">
                 <div class="info">
@@ -163,7 +170,7 @@
                 data-img="../2.Graficky_navrh/IAST.png"
                 data-title="Ponožky pre IAST"
                 data-description="Zoznámte sa s najnovšími trendmi a technológiami v oblasti internetu a počítačových sietí. Naše ponožky sú inšpirované moderným digitálnym svetom a prinášajú štýl, ktorý spája techniku s pohodlím."
-                data-price="5€"
+                data-price="4.99€"
                 onclick="openProductPopup(this)">
                 <img src="../2.Graficky_navrh/IAST.png" alt="IAST ponožky">
                 <div class="info">
@@ -177,7 +184,7 @@
                 data-img="../2.Graficky_navrh/IT.png"
                 data-title="IT ponožky"
                 data-description="Pre všetkých Itečkárov, ktorí milujú technológie, programovanie a riešenie IT výziev. Naše ponožky sú pohodlné, štýlové a perfektne doplnia tvoj každodenný IT outfit."
-                data-price="5€"
+                data-price="4.99€"
                 onclick="openProductPopup(this)">
                 <img src="../2.Graficky_navrh/IT.png" alt="Ponožky pre IT">
                 <div class="info">
@@ -191,7 +198,7 @@
                 data-img="../2.Graficky_navrh/PDT.png"
                 data-title="PDT ponožky"
                 data-description="Programátory digitálnych technológií slúžia na nastavovanie, testovanie a správu rôznych elektronických zariadení. Spoľahlivé nástroje pre profesionálov aj technických nadšencov."
-                data-price="5€"
+                data-price="4.99€"
                 onclick="openProductPopup(this)">
                 <img src="../2.Graficky_navrh/PDT.png" alt="PDT">
                 <div class="info">
@@ -205,7 +212,7 @@
                 data-img="../2.Graficky_navrh/Spravca.png"
                 data-title="Ponožky pre Spravcov"
                 data-description="Tieto ponožky sú navrhnuté špeciálne pre správcov sietí, pohodlné, odolné a so štýlovým motívom, ktorý ocenia všetci, čo držia sieť pod kontrolou. Perfektný doplnok pre každodennú prácu aj odpočinok."
-                data-price="5€"
+                data-price="4.99€"
                 onclick="openProductPopup(this)">
                 <img src="../2.Graficky_navrh/Spravca.png" alt="Ponožky pre Spravcov">
                 <div class="info">
@@ -219,7 +226,7 @@
                 data-img="../2.Graficky_navrh/Vianoce.png"
                 data-title="Vianočne ponožky"
                 data-description="Zažite kúzlo Vianoc s našimi vianočnými ponožkami plnými veselých motívov a teplého komfortu. Perfektný doplnok na sviatočné chvíle doma alebo štýlový darček pre vašich blízkych."
-                data-price="5€"
+                data-price="4.99€"
                 onclick="openProductPopup(this)">
                 <img src="../2.Graficky_navrh/Vianoce.png" alt="Vianočne ponožky">
                 <div class="info">
@@ -250,12 +257,13 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Ostrovky | Všetky práva sú vyhradené.</p>
-        <a href="https://www.instagram.com/sos_ostrovskeho/?hl=en" target="_blank" class="social-icon">
+        <a href="https://www.instagram.com/ostrov_ponozky/?hl=en" target="_blank" class="social-icon">
             <i class="fab fa-instagram"></i> Instagram
         </a>
     </footer>
 
     <script>
+        //Popup open
         function openProductPopup(element) {
             const popup = document.getElementById('popup');
             const content = popup.querySelector('.popup-content');
@@ -270,11 +278,12 @@
 
             soonMessage.style.display = isSoon ? 'block' : 'none';
 
+            //Adjust price margin
             if (isSoon) {
-                popupPrice.innerHTML = `<del>5€</del>`;
+                popupPrice.innerHTML = `<del>4.99€</del>`;
                 popupPrice.classList.remove('item-margin');
             } else {
-                popupPrice.innerHTML = `5€`;
+                popupPrice.innerHTML = `4.99€`;
                 popupPrice.classList.add('item-margin');
             }
 
@@ -283,6 +292,7 @@
             content.classList.add('show');
         }
 
+        //Close popup
         function closePopup() {
             const popup = document.getElementById('popup');
             const content = popup.querySelector('.popup-content');
@@ -295,11 +305,21 @@
             }, 300);
         }
 
+        //Close by clicking anywhere
         function handleOverlayClick(e) {
             if (e.target.id === 'popup') {
                 closePopup();
             }
         }
+
+        //Toogle volume
+        const video = document.getElementById('introVideo');
+        const toggleSoundButton = document.getElementById('toggleSound');
+
+        toggleSoundButton.addEventListener('click', () => {
+            video.muted = !video.muted;
+            toggleSoundButton.textContent = video.muted ? "🔇" : "🔊";
+        });
     </script>
 </body>
 </html>

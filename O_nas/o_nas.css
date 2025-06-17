@@ -15,6 +15,7 @@
     to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
+
 body {
     font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
@@ -97,7 +98,6 @@ header nav ul li a:hover {
 main {
     padding: 40px 20px;
     text-align: center;
-    animation: fadeIn 0.8s ease-out;
 }
 
 .about-us {
@@ -131,6 +131,15 @@ main {
     margin-left: 10px;
 }
 
+.right-column {
+    flex: 1 1 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
 .plagat {
     flex: 1 1 35%;
     display: flex;
@@ -145,15 +154,6 @@ main {
     height: auto;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.right-column {
-    flex: 1 1 35%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
 }
 
 .thank-you {
@@ -178,6 +178,24 @@ main {
     line-height: 1.6;
 }
 
+.instagram_post {
+    flex: 1 1 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+.instagram_post img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/*Popup*/
 .popup-overlay {
     position: fixed;
     top: 0;
